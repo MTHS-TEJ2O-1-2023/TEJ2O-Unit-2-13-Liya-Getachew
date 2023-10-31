@@ -13,7 +13,6 @@ let loopCounter: number = 4
 basic.clearScreen()
 basic.showIcon(IconNames.Skull)
 pause(500)
-basic.clearScreen()
 
 // neopixel setup
 neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
