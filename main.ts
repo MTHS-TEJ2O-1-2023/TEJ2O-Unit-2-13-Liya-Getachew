@@ -7,7 +7,7 @@
 
 // variables
 let neopixelStrip: neopixel.Strip = null
-let loopCounter: number = 0
+let loopCounter: number = 4
 
 // setup
 basic.clearScreen()
@@ -27,7 +27,6 @@ neopixelStrip.show()
 input.onButtonPressed(Button.A, function () {
   // setup
   basic.clearScreen()
-  let loopCounter: number = 4
 
   // all neopixels on
   neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Purple))
