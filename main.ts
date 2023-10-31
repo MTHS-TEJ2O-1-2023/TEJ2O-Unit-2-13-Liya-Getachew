@@ -7,7 +7,6 @@
 
 // variables
 let neopixelStrip: neopixel.Strip = null
-let sprite: game.LedSprite = null
 let loopCounter: number = 4
 
 // setup
@@ -24,18 +23,17 @@ neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.show()
 
-
 // button A pressed
 input.onButtonPressed(Button.A, function () {
   // setup
   basic.clearScreen()
-  let loopCounter = 4
+  let loopCounter: number = 4
 
-  // neopixel
-  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
-  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
-  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
-  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
+  // all neopixels on
+  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Purple))
+  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Purple))
+  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Purple))
+  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Purple))
   neopixelStrip.show()
 
   // loop
@@ -44,6 +42,6 @@ input.onButtonPressed(Button.A, function () {
     basic.showNumber(loopCounter)
     neopixelStrip.setPixelColor(loopCounter, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.show()
-    loopCounter = loopCounter - 1
+    loopCounter--
   }
 })
