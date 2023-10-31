@@ -7,7 +7,7 @@
 
 // variables
 let neopixelStrip: neopixel.Strip = null
-let loopCounter: number = 4
+let loopCounter: number = 0
 
 // setup
 basic.clearScreen()
