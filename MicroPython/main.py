@@ -55,3 +55,5 @@ while True:
 
             # loop_counter goes down by 1
             loop_counter -= 1
+        else:
+            display.show(Image.SKULL)
