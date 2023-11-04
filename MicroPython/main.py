@@ -44,16 +44,19 @@ while True:
         print(neopixel_strip[3])
         neopixel_strip.show()
 
+        # count number of loops
         while loop_counter >= 0:
             sleep(500)
             display.show(str(loop_counter))
+
+            # loop_counter goes down by 1
+            loop_counter -= 1
+
+            sleep(1000)
 
             # turn off neopixels one by one
             neopixel_strip[loop_counter] = (0, 0, 0)
             print(neopixel_strip[loop_counter])
             neopixel_strip.show()
-
-            # loop_counter goes down by 1
-            loop_counter -= 1
         else:
             display.show(Image.SKULL)
